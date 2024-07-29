@@ -10,6 +10,8 @@ from api.main.viewsets.role import RoleViewSet
 from api.main.viewsets.user_role import UserRoleViewSet
 from api.main.viewsets.module import ModuleViewSet
 from api.main.viewsets.module_field import ModuleFieldViewSet
+from api.main.viewsets.gender import GenderViewSet
+from api.main.viewsets.employee import EmployeeViewSet
 
 router = routers.SimpleRouter(trailing_slash=False)
 
@@ -30,6 +32,10 @@ router.register(r"user_role", UserRoleViewSet, basename="user_role")
 router.register(r"module", ModuleViewSet, basename="module")
 
 router.register(r"module_field", ModuleFieldViewSet, basename="module_field")
+
+router.register(r"gender", GenderViewSet, basename="gender")
+
+router.register(r"employee", EmployeeViewSet, basename="employee")
 
 urlpatterns = [
     *router.urls,
