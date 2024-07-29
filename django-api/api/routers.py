@@ -9,6 +9,7 @@ from api.user.viewsets import UserViewSet
 from api.main.viewsets.role import RoleViewSet
 from api.main.viewsets.user_role import UserRoleViewSet
 from api.main.viewsets.module import ModuleViewSet
+from api.main.viewsets.module_field import ModuleFieldViewSet
 
 router = routers.SimpleRouter(trailing_slash=False)
 
@@ -27,6 +28,8 @@ router.register(r"role", RoleViewSet, basename="role")
 router.register(r"user_role", UserRoleViewSet, basename="user_role")
 
 router.register(r"module", ModuleViewSet, basename="module")
+
+router.register(r"module_field", ModuleFieldViewSet, basename="module_field")
 
 urlpatterns = [
     *router.urls,
