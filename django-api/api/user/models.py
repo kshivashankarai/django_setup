@@ -6,6 +6,7 @@ from django.contrib.auth.models import (
     PermissionsMixin,
 )
 
+from api.main.models.role import Role
 
 class UserManager(BaseUserManager):
     def create_user(self, username, email, password=None, **kwargs):

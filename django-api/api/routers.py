@@ -7,7 +7,7 @@ from api.authentication.viewsets import (
 from rest_framework import routers
 from api.user.viewsets import UserViewSet
 from api.main.viewsets.role import RoleViewSet
-# from api.main.viewsets.user_role import UserRoleViewSet
+from api.main.viewsets.user_role import UserRoleViewSet
 
 router = routers.SimpleRouter(trailing_slash=False)
 
@@ -23,7 +23,7 @@ router.register(r"logout", LogoutViewSet, basename="logout")
 
 router.register(r"role", RoleViewSet, basename="role")
 
-# router.register(r"user_role", UserRoleViewSet, basename="user_role")
+router.register(r"user_role", UserRoleViewSet, basename="user_role")
 
 urlpatterns = [
     *router.urls,
